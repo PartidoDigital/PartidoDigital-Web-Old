@@ -1,6 +1,41 @@
 $(document).ready(function(){
 	"use strict";
 	
+	var prepareEntry = function(data) {
+	    var parent = $("<div/>", { class: "kode_latest_blog kode_blog_style2" });
+	    parent.append($("<figure/>").append($("<img/>", { src: data.find("image").text() })));
+	    parent.append($("<h6/>", { text: data.find("category").text() }));
+	    var h6 = $("<h6/>").append($("<a/>", { href: data.find("link").text(), text: data.find("title").text() }));
+	    parent.append($("<div/>", { class: "kode_latest_blog_des" }).append(h6));
+	    return parent;
+	}
+	
+	/* ---------------------------------------------------------------------- */
+	/*	Blog posts from Jekyll
+	/* ---------------------------------------------------------------------- */
+	$.get("http://blog.partidodigital.org.uy/feed.xml", function (data) {
+	    var cant = 0;
+	    var parent = $(".kode_latst_post_lst");
+	    $(data).find("item").each(function () { // or "item" or whatever suits your feed
+	        cant++;
+	        var newEntry = prepareEntry($(this));
+	        switch(cant){
+	            case 1: 
+	            case 2:
+	                var newCol = $('<div/>', { class: "col-md-6" });
+	            	newCol.append(newEntry);
+	            	parent.append(newCol);
+	            	break;
+	            case 3:
+	               $('.col-md-6:first', parent).append(newEntry);
+	               break;
+	            case 4:
+	               $('.col-md-6:last', parent).append(newEntry);
+	               break;
+	        }
+	    });
+	});
+	
 	/* ---------------------------------------------------------------------- */
 	/*	Search Script
 	/* ---------------------------------------------------------------------- */
