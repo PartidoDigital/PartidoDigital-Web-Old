@@ -956,7 +956,7 @@ ul.kode_tab_lnk li:hover:after{
 }
 .kode_wel_demo_des p{
 	line-height:29px;
-	word-break:break-all;
+	/*word-break:break-all;*/
 	font-weight:400;
 	margin-bottom:20px;	
 	color:#666;
@@ -1325,7 +1325,7 @@ ul.kode_tab_lnk.nav > li > a:hover{
 }
 .kode_news_des p{
 	color:#999999;
-	word-break:break-all;
+	/*word-break:break-all;*/
 	margin-bottom:10px;	
 }
 .kode_news_des a{
@@ -1692,7 +1692,7 @@ ul.kode_tab_lnk.nav > li > a:hover{
 	line-height:31px;	
 }
 .kode_lst1_des p{
-	word-break:break-all;
+	/*word-break:break-all;*/
 	line-height:28px;	
 }
 .kode_lst1_des ul{
@@ -1837,7 +1837,7 @@ ul.kode_tab_lnk.nav > li > a:hover{
 }
 .kode_poli_img_des p{
 	color:#cccccc;
-	word-break:break-all;	
+	/*word-break:break-all;	*/
 }
 .kode_politician_des{
 	float:left;
