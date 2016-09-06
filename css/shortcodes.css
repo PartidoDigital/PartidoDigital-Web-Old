@@ -72,6 +72,9 @@
 	background-color:#fff;
 	z-index:-9;	
 }
+.kode_link_2:hover {
+    color: #f37021;
+}
 .kode_link_2:hover:before{
 	width:100%;
 	height:100%;	
