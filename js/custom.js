@@ -13,7 +13,7 @@ $(document).ready(function(){
 	/* ---------------------------------------------------------------------- */
 	/*	Blog posts from Jekyll
 	/* ---------------------------------------------------------------------- */
-	$.get("http://blog.partidodigital.org.uy/feed.xml", function (data) {
+	$.get("https://blog.partidodigital.org.uy/feed.xml", function (data) {
 	    var cant = 0;
 	    var parent = $(".kode_latst_post_lst");
 	    $(data).find("item").each(function () { // or "item" or whatever suits your feed
